@@ -18,14 +18,14 @@ public class Voice : MonoBehaviour
 
     //options for first step of music
     [Header("Start params")]
-    [Min(0)] public float firstStepOffset = 0f;
+    [Min(0)] public float firstStepDelay = 0f;
     public bool soundOnFirstStep = false;
     public float initialSoundingProbability = 0f;
 
     //serialised voice parameters, to be changed in the inspector/automated via animation clips
     [Header("Voice parameters")]
-    [Tooltip("Time between steps")]
-    public float stepInterval = 0.1f; 
+    [Tooltip("Time between steps - 1 = one semibreve at the voice manager's tempo")]
+    public float stepInterval = 0.25f; 
     
     [Tooltip("value added to next step's sounding probability when left neighbour sounds")]
     public float leftNeighbourInfluence = 0f;
@@ -47,7 +47,7 @@ public class Voice : MonoBehaviour
         audioPlayer = GetComponent<PlayAudioFromRhythm>();
         audioPlayer.Init();
 
-        StartCoroutine(StepCoroutine());
+        StartCoroutine(StartStepCoroutineDelayed());
     }
 
     //Called by the VoiceManager this voice is attached to on startup
@@ -71,34 +71,50 @@ public class Voice : MonoBehaviour
                 stepIncrement
             ) 
         };
-
-        Debug.Log(name + " steps size:" + steps.Count);
     }
 
-    public IEnumerator StepCoroutine()
+    //waits until elapsed time has passed firstStepDelay, then starts the voice step coroutine
+    private IEnumerator StartStepCoroutineDelayed()
+    {
+        while (Time.time < NoteLengthToRealTime(firstStepDelay))
+        {
+            yield return null;
+        }
+
+        Debug.Log("Start at time: " + Time.time);
+        StartCoroutine(StepCoroutine());
+    }
+
+    private IEnumerator StepCoroutine()
     {
         while(true)
         {
-            (VoiceAtStep, VoiceAtStep) neighbours = manager.GetNeighbours(id);
-            UpdateVoice(neighbours.Item1, neighbours.Item2);
-            //Debug.Log(name + ": " + steps[steps.Count - 1]);
-
-            if (steps[steps.Count - 1].sounding)
+            if(manager == null)
             {
-                if(emphasiseEachNBeats > 0 && (steps.Count - 1) % emphasiseEachNBeats == 0)
-                {
-                    audioPlayer.SetVolume(emphasisVolume);
-                    Debug.Log("beat emphasis");
-                }
-                else
-                {
-                    audioPlayer.SetVolume(volume);
-                }
+                Debug.LogError("Voice " + name + " has no VoiceManager!");
+            }
+            else
+            {
+                (VoiceAtStep, VoiceAtStep) neighbours = manager.GetNeighbours(id);
+                UpdateVoice(neighbours.Item1, neighbours.Item2);
 
-                audioPlayer.PlayAudio();
+                if (steps[steps.Count - 1].sounding)
+
+                {
+                    if (emphasiseEachNBeats > 0 && (steps.Count - 1) % emphasiseEachNBeats == 0)
+                    {
+                        audioPlayer.SetVolume(emphasisVolume);
+                    }
+                    else
+                    {
+                        audioPlayer.SetVolume(volume);
+                    }
+
+                    audioPlayer.PlayAudio();
+                }
             }
 
-            yield return new WaitForSeconds(stepInterval);
+            yield return new WaitForSeconds(NoteLengthToRealTime(stepInterval)); //convert step interval from 1 = 1 semibreve at manager tempo to actual time
         }
     }
 
@@ -148,5 +164,10 @@ public class Voice : MonoBehaviour
         float multiplier = 1000f;
 
         return (int)(a * multiplier) % (int)(b * multiplier) == 0;
+    }
+
+    private float NoteLengthToRealTime(float noteLength)
+    {
+        return (noteLength * 60 * 4) / manager.tempo;
     }
 }

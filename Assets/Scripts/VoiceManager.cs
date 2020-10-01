@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class VoiceManager : MonoBehaviour
 {
+    [Min(0)] public float tempo = 120;
+    
     public Voice[] voices; //allows attaching of voices via inspector
     public bool wrapNeighbours = false;
 
