@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4363252019338234833}
   - component: {fileID: 4363252019338234838}
   - component: {fileID: 4363252019338234837}
+  - component: {fileID: 1066616803783121517}
   m_Layer: 0
   m_Name: Voice
   m_TagString: Untagged
@@ -46,12 +47,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f68d5ec44439214daed4aced642ac04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  firstStepDelay: 0
   soundOnFirstStep: 0
   initialSoundingProbability: 0
   stepInterval: 0.5
   leftNeighbourInfluence: 0
   rightNeighbourInfluence: 0
   stepIncrement: 0.1
+  emphasiseEachNBeats: 0
+  volume: 0.5
+  emphasisVolume: 0.75
 --- !u!114 &4363252019338234833
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -64,7 +69,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35e099d6d4fa11c448ea21dc29bab8c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playMode: 1
+  playMode: 0
 --- !u!82 &4363252019338234838
 AudioSource:
   m_ObjectHideFlags: 0
@@ -177,3 +182,27 @@ Animation:
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
   m_CullingType: 0
+--- !u!167 &1066616803783121517
+AudioReverbZone:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4363252019338234836}
+  m_Enabled: 1
+  m_MinDistance: 10
+  m_MaxDistance: 15
+  m_ReverbPreset: 1
+  m_Room: -1000
+  m_RoomHF: -100
+  m_DecayTime: 1.49
+  m_DecayHFRatio: 0.83
+  m_Reflections: -2602
+  m_ReflectionsDelay: 0.007
+  m_Reverb: 200
+  m_ReverbDelay: 0.011
+  m_HFReference: 5000
+  m_Diffusion: 100
+  m_Density: 100
+  m_LFReference: 250
+  m_RoomLF: 0
