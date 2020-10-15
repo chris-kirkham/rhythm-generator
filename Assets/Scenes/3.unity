@@ -228,6 +228,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4363252019338234832, guid: fbb68ca2d61f19d4bbf05e815aa65b54, type: 3}
+      propertyPath: loopSequencer.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4363252019338234832, guid: fbb68ca2d61f19d4bbf05e815aa65b54, type: 3}
       propertyPath: stepInterval
       value: 0.67
       objectReference: {fileID: 0}
@@ -241,6 +245,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4363252019338234832, guid: fbb68ca2d61f19d4bbf05e815aa65b54, type: 3}
       propertyPath: stepIncrement
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4363252019338234832, guid: fbb68ca2d61f19d4bbf05e815aa65b54, type: 3}
+      propertyPath: loopSequencer.Array.data[0]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4363252019338234832, guid: fbb68ca2d61f19d4bbf05e815aa65b54, type: 3}
+      propertyPath: loopSequencer.Array.data[1]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4363252019338234832, guid: fbb68ca2d61f19d4bbf05e815aa65b54, type: 3}
+      propertyPath: loopSequencer.Array.data[3]
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4363252019338234833, guid: fbb68ca2d61f19d4bbf05e815aa65b54, type: 3}
@@ -503,6 +519,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4363252019338234832, guid: fbb68ca2d61f19d4bbf05e815aa65b54, type: 3}
+      propertyPath: loopSequencer.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4363252019338234832, guid: fbb68ca2d61f19d4bbf05e815aa65b54, type: 3}
       propertyPath: stepInterval
       value: 0.665
       objectReference: {fileID: 0}
@@ -516,6 +536,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4363252019338234832, guid: fbb68ca2d61f19d4bbf05e815aa65b54, type: 3}
       propertyPath: stepIncrement
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4363252019338234832, guid: fbb68ca2d61f19d4bbf05e815aa65b54, type: 3}
+      propertyPath: loopSequencer.Array.data[0]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4363252019338234832, guid: fbb68ca2d61f19d4bbf05e815aa65b54, type: 3}
+      propertyPath: loopSequencer.Array.data[1]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4363252019338234832, guid: fbb68ca2d61f19d4bbf05e815aa65b54, type: 3}
+      propertyPath: loopSequencer.Array.data[3]
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4363252019338234833, guid: fbb68ca2d61f19d4bbf05e815aa65b54, type: 3}
@@ -1146,6 +1178,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4363252019338234832, guid: fbb68ca2d61f19d4bbf05e815aa65b54, type: 3}
+      propertyPath: loopSequencer.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4363252019338234832, guid: fbb68ca2d61f19d4bbf05e815aa65b54, type: 3}
       propertyPath: stepInterval
       value: 0.66
       objectReference: {fileID: 0}
@@ -1159,6 +1195,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4363252019338234832, guid: fbb68ca2d61f19d4bbf05e815aa65b54, type: 3}
       propertyPath: stepIncrement
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4363252019338234832, guid: fbb68ca2d61f19d4bbf05e815aa65b54, type: 3}
+      propertyPath: loopSequencer.Array.data[0]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4363252019338234832, guid: fbb68ca2d61f19d4bbf05e815aa65b54, type: 3}
+      propertyPath: loopSequencer.Array.data[1]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4363252019338234832, guid: fbb68ca2d61f19d4bbf05e815aa65b54, type: 3}
+      propertyPath: loopSequencer.Array.data[3]
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4363252019338234833, guid: fbb68ca2d61f19d4bbf05e815aa65b54, type: 3}
@@ -2230,6 +2278,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4363252019338234832, guid: fbb68ca2d61f19d4bbf05e815aa65b54, type: 3}
+      propertyPath: loopSequencer.Array.size
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 4363252019338234832, guid: fbb68ca2d61f19d4bbf05e815aa65b54, type: 3}
       propertyPath: stepInterval
       value: 0.08333335
       objectReference: {fileID: 0}
@@ -2248,6 +2300,46 @@ PrefabInstance:
     - target: {fileID: 4363252019338234832, guid: fbb68ca2d61f19d4bbf05e815aa65b54, type: 3}
       propertyPath: emphasisVolume
       value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 4363252019338234832, guid: fbb68ca2d61f19d4bbf05e815aa65b54, type: 3}
+      propertyPath: loopSequencer.Array.data[0]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4363252019338234832, guid: fbb68ca2d61f19d4bbf05e815aa65b54, type: 3}
+      propertyPath: loopSequencer.Array.data[1]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4363252019338234832, guid: fbb68ca2d61f19d4bbf05e815aa65b54, type: 3}
+      propertyPath: loopSequencer.Array.data[2]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4363252019338234832, guid: fbb68ca2d61f19d4bbf05e815aa65b54, type: 3}
+      propertyPath: loopSequencer.Array.data[3]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4363252019338234832, guid: fbb68ca2d61f19d4bbf05e815aa65b54, type: 3}
+      propertyPath: loopSequencer.Array.data[4]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4363252019338234832, guid: fbb68ca2d61f19d4bbf05e815aa65b54, type: 3}
+      propertyPath: loopSequencer.Array.data[5]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4363252019338234832, guid: fbb68ca2d61f19d4bbf05e815aa65b54, type: 3}
+      propertyPath: loopSequencer.Array.data[6]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4363252019338234832, guid: fbb68ca2d61f19d4bbf05e815aa65b54, type: 3}
+      propertyPath: loopSequencer.Array.data[7]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4363252019338234832, guid: fbb68ca2d61f19d4bbf05e815aa65b54, type: 3}
+      propertyPath: loopSequencer.Array.data[9]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4363252019338234832, guid: fbb68ca2d61f19d4bbf05e815aa65b54, type: 3}
+      propertyPath: loopSequencer.Array.data[10]
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4363252019338234833, guid: fbb68ca2d61f19d4bbf05e815aa65b54, type: 3}
       propertyPath: playMode
@@ -2431,6 +2523,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4363252019338234832, guid: fbb68ca2d61f19d4bbf05e815aa65b54, type: 3}
+      propertyPath: loopSequencer.Array.size
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 4363252019338234832, guid: fbb68ca2d61f19d4bbf05e815aa65b54, type: 3}
       propertyPath: stepInterval
       value: 0.08333335
       objectReference: {fileID: 0}
@@ -2453,6 +2549,38 @@ PrefabInstance:
     - target: {fileID: 4363252019338234832, guid: fbb68ca2d61f19d4bbf05e815aa65b54, type: 3}
       propertyPath: emphasisVolume
       value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 4363252019338234832, guid: fbb68ca2d61f19d4bbf05e815aa65b54, type: 3}
+      propertyPath: loopSequencer.Array.data[0]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4363252019338234832, guid: fbb68ca2d61f19d4bbf05e815aa65b54, type: 3}
+      propertyPath: loopSequencer.Array.data[1]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4363252019338234832, guid: fbb68ca2d61f19d4bbf05e815aa65b54, type: 3}
+      propertyPath: loopSequencer.Array.data[3]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4363252019338234832, guid: fbb68ca2d61f19d4bbf05e815aa65b54, type: 3}
+      propertyPath: loopSequencer.Array.data[4]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4363252019338234832, guid: fbb68ca2d61f19d4bbf05e815aa65b54, type: 3}
+      propertyPath: loopSequencer.Array.data[6]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4363252019338234832, guid: fbb68ca2d61f19d4bbf05e815aa65b54, type: 3}
+      propertyPath: loopSequencer.Array.data[7]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4363252019338234832, guid: fbb68ca2d61f19d4bbf05e815aa65b54, type: 3}
+      propertyPath: loopSequencer.Array.data[9]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4363252019338234832, guid: fbb68ca2d61f19d4bbf05e815aa65b54, type: 3}
+      propertyPath: loopSequencer.Array.data[11]
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4363252019338234833, guid: fbb68ca2d61f19d4bbf05e815aa65b54, type: 3}
       propertyPath: playMode

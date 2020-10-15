@@ -609,9 +609,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f68d5ec44439214daed4aced642ac04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firstStepDelay: 0
+  startTime: 0
+  endTime: 0
   soundOnFirstStep: 0
   initialSoundingProbability: 0
+  loopLength: 4
+  loopBeats: 01010001
   stepInterval: 0.25
   leftNeighbourInfluence: 0
   rightNeighbourInfluence: 0
@@ -884,9 +887,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f68d5ec44439214daed4aced642ac04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firstStepDelay: 0
+  startTime: 0
+  endTime: 0
   soundOnFirstStep: 0
   initialSoundingProbability: 0
+  loopLength: 1
+  loopBeats: 
   stepInterval: 0.2505
   leftNeighbourInfluence: 0
   rightNeighbourInfluence: 0
@@ -1103,9 +1109,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f68d5ec44439214daed4aced642ac04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firstStepDelay: 0
+  startTime: 0
+  endTime: 0
   soundOnFirstStep: 0
   initialSoundingProbability: 0
+  loopLength: 1
+  loopBeats: 
   stepInterval: 0.125
   leftNeighbourInfluence: 0
   rightNeighbourInfluence: 0
@@ -1333,9 +1342,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f68d5ec44439214daed4aced642ac04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firstStepDelay: 0
+  startTime: 0
+  endTime: 0
   soundOnFirstStep: 0
   initialSoundingProbability: 0
+  loopLength: 1
+  loopBeats: 
   stepInterval: 0.2505
   leftNeighbourInfluence: 0
   rightNeighbourInfluence: 0
@@ -1515,9 +1527,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f68d5ec44439214daed4aced642ac04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firstStepDelay: 0
+  startTime: 0
+  endTime: 0
   soundOnFirstStep: 0
   initialSoundingProbability: 0
+  loopLength: 1
+  loopBeats: 
   stepInterval: 0.125
   leftNeighbourInfluence: 0
   rightNeighbourInfluence: 0
@@ -1721,9 +1736,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f68d5ec44439214daed4aced642ac04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firstStepDelay: 0
+  startTime: 0
+  endTime: 0
   soundOnFirstStep: 0
   initialSoundingProbability: 0
+  loopLength: 1
+  loopBeats: 
   stepInterval: 0.166665
   leftNeighbourInfluence: 0
   rightNeighbourInfluence: 0
@@ -1822,7 +1840,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7081953595626433708, guid: e2e62174285dfc84b980e85107afe504, type: 3}
       propertyPath: voices.Array.size
-      value: 6
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7081953595626433708, guid: e2e62174285dfc84b980e85107afe504, type: 3}
       propertyPath: voices.Array.data[0]

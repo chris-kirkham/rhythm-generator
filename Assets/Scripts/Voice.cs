@@ -16,11 +16,16 @@ public class Voice : MonoBehaviour
     //list to hold voice info at each step of the music
     private List<VoiceAtStep> steps;
 
-    //options for first step of music
+    //start/end options
     [Header("Start params")]
-    [Min(0)] public float firstStepDelay = 0f;
+    [Min(0)] public float startTime = 0f;
+    [Min(0)] public float endTime = 0f;
     public bool soundOnFirstStep = false;
     public float initialSoundingProbability = 0f;
+
+    //loop parameters/trackers
+    public bool[] loopSequencer;
+    private int loopCurrentStep = 0;
 
     //serialised voice parameters, to be changed in the inspector/automated via animation clips
     [Header("Voice parameters")]
@@ -46,6 +51,14 @@ public class Voice : MonoBehaviour
     {
         audioPlayer = GetComponent<PlayAudioFromRhythm>();
         audioPlayer.Init();
+
+
+        //initialise loop sequencer to length 1 if not initialsed to length >0 in inspector
+        if(loopSequencer.Length == 0)
+        {
+            loopSequencer = new bool[1] { true };
+        }
+        
 
         StartCoroutine(StartStepCoroutineDelayed());
     }
@@ -76,7 +89,7 @@ public class Voice : MonoBehaviour
     //waits until elapsed time has passed firstStepDelay, then starts the voice step coroutine
     private IEnumerator StartStepCoroutineDelayed()
     {
-        while (Time.time < NoteLengthToRealTime(firstStepDelay))
+        while (Time.time < NoteLengthToRealTime(startTime))
         {
             yield return null;
         }
@@ -87,6 +100,7 @@ public class Voice : MonoBehaviour
 
     private IEnumerator StepCoroutine()
     {
+        //while(Time.time < NoteLengthToRealTime(endTime) || endTime <= 0f) //repeat while time < endTime; if endTime <= 0, repeat infinitely 
         while(true)
         {
             if(manager == null)
@@ -95,10 +109,13 @@ public class Voice : MonoBehaviour
             }
             else
             {
+                loopCurrentStep++;
+                if (loopCurrentStep > loopSequencer.Length - 1) loopCurrentStep = 0;
+
                 (VoiceAtStep, VoiceAtStep) neighbours = manager.GetNeighbours(id);
                 UpdateVoice(neighbours.Item1, neighbours.Item2);
 
-                if (steps[steps.Count - 1].sounding)
+                if (steps[steps.Count - 1].sounding && loopSequencer[loopCurrentStep])
 
                 {
                     if (emphasiseEachNBeats > 0 && (steps.Count - 1) % emphasiseEachNBeats == 0)
